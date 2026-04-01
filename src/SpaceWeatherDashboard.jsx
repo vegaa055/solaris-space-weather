@@ -107,6 +107,7 @@ function StatusPill({ level, type }) {
   );
 }
 
+// KpBar component to visualize Kp index with a vertical bar and color coding
 function KpBar({ value, time }) {
   const kp = Math.round(parseFloat(value) || 0);
   const color = KP_COLORS[Math.min(kp, 9)];
@@ -136,6 +137,7 @@ function KpBar({ value, time }) {
   );
 }
 
+// GlowCard component for consistent card styling with a glowing header
 function GlowCard({ title, children, color = "#00ff88", span = 1 }) {
   return (
     <div style={{
@@ -159,6 +161,7 @@ function GlowCard({ title, children, color = "#00ff88", span = 1 }) {
   );
 }
 
+// BigNumber component to display a large value with an optional unit and subtitle
 function BigNumber({ value, unit, sub, color = "#00ff88" }) {
   return (
     <div style={{ textAlign: "center" }}>
@@ -197,6 +200,7 @@ function AlertItem({ alert }) {
   );
 }
 
+// SolarProbRow component to display probabilities for solar flares with colored bars
 function SolarProbRow({ label, prob1, prob2, prob3 }) {
   const barColor = (val) => {
     const n = parseInt(val) || 0;
